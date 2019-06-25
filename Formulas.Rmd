@@ -1,0 +1,24 @@
+---
+title: "Convolutional Neural Networks Continued"
+output: html_document
+---
+The relationship between output, kernel size, strides, input size and padding is:
+
+$$\begin{aligned}n_{out}=\frac{n_{in} +2p-k}{s} +1\end{aligned}$$
+$$\begin{aligned}
+n_{out} &=Size~ of~ output\\
+n_{in} &=Size~ of~ input\\
+p &=Padding~ size\\
+k &=Kernel~ size\\
+s &=Size~ of~ stride\\
+\end{aligned}$$
+
+Derive the relation for kernel size
+$$\begin{aligned}
+n_{out} &=\frac{n_{in} +2p-k}{s} +1\\
+n_{out}-1 &=\frac{n_{in} +2p-k}{s}\\
+(n_{out}-1)*s &=n_{in} +2p-k\\
+k &=n_{in} +2p-(n_{out}-1)*s\\
+k &=n_{in} +2p-(-(1-n_{out})*s\\
+k &=n_{in} +2p+((1-n_{out})*s\\
+\end{aligned}$$
